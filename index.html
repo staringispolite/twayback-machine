@@ -66,7 +66,7 @@
             // I'm sure someone could still break this, but don't be dumb.
             username = encodeURIComponent(username);
             // See what people are searching. 
-            pageTracker.ga('send', 'pageview', '/search/' + username);
+            _gaq.push(['_trackPageview', '/search/' + username]);
             // Twitter search works with or without @-sign.
             var searchURL = "https://twitter.com/search?q=from%3A" + username + "%20until%3A2011-12-31&src=twayback";
             window.location.href=searchURL;
